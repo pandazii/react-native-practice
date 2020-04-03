@@ -13,7 +13,7 @@ export default function GridScreen() {
         <SafeAreaView style={{ flex: 1 }}>
             <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
                 {/* Row */}
-                <View style={{ flex: 1, flexDirection: 'row', backgroundColor: 'powderblue' }} />
+                <View style={{ flex: 1, flexDirection: 'row', backgroundColor: 'red' }} />
                 {/* Row */}
                 <View style={{ flex: 2, flexDirection: 'row', backgroundColor: 'skyblue' }} />
                 {/* Row */}
