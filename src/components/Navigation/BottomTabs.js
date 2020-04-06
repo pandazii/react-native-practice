@@ -1,19 +1,28 @@
 import React from 'react'
+
+import { StyleSheet } from 'react-native'
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 // Icons
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwsomeIcon from 'react-native-vector-icons/FontAwesome';
 
-
+// Screens
 import GridScreen from '../../screens/Practice/GridScreen'
+import HomeScreen from '../../screens/Home/HomeScreen'
 
-const Tab = createBottomTabNavigator();
+
+const Tab = createMaterialBottomTabNavigator();
 
 export default function BottomTabs() {
     return (
-        <Tab.Navigator>
-            <Tab.Screen name="Home" component={GridScreen} options={{
+        <Tab.Navigator initialRouteName="Home"
+            activeColor="#f0edf6"
+            inactiveColor="#3e2465"
+            barStyle={{ backgroundColor: '#694fad' }}>
+            <Tab.Screen name="Home" component={HomeScreen} options={{
                 tabBarLabel: 'Home',
                 tabBarIcon: ({ tintColor }) => (
                     <FontAwsomeIcon name="home" color="#ff4d4d" size={24} />
@@ -40,5 +49,12 @@ export default function BottomTabs() {
                 )
             }} />
         </Tab.Navigator>
+
+
     )
 }
+
+const BottomTabsStyles = StyleSheet.create({
+
+});
+

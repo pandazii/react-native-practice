@@ -8,16 +8,14 @@ import {
 } from 'react-native';
 
 // Navigation
-import { NavigationContainer } from '@react-navigation/native'; 
+import { NavigationContainer } from '@react-navigation/native';
 import BottomTabs from './src/components/Navigation/BottomTabs'
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <NavigationContainer>
-        <BottomTabs />
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer>
+      <BottomTabs />
+    </NavigationContainer>
   );
 }
 const AppStyles = StyleSheet.create({
